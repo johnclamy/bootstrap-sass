@@ -10,7 +10,7 @@ def post_list(request):
 
 def post_detail(request, id):
   try:
-    post = Post.publish.get(id=id)
+    post = Post.published.get(id=id)
   except Post.DoesNotExist:
     raise Http404('No post found.')
   return(request, 'blog/post/detail.html', {'post': post })
