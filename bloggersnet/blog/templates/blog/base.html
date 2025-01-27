@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static "css/blog.css" %}">
   </head>
   <body>
-    <main id="content"></main>
+    <main id="content">{% block content %}{% endblock %}</main>
     <aside id="sidebar">
       <h1>my blog</h1>
       <p>Welcome to my blog.</p>
